@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUME | Electrical Education & Safety — Calgary, AB</title>
+    <title>OUME | Electrical Educational Blog for Canadian Homeowner</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts (Inter & Montserrat) -->
@@ -84,9 +84,6 @@
                     <button onclick="showPage('about')" id="nav-about" class="nav-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all duration-200">
                         About Us
                     </button>
-                    <button onclick="showPage('diy-checker')" id="nav-diy-checker" class="nav-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all duration-200">
-                        DIY Checker
-                    </button>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -109,9 +106,6 @@
             <button onclick="showPage('about'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 flex items-center gap-3">
                 <i class="fa-solid fa-user-shield text-canadared-700"></i> About Us
             </button>
-            <button onclick="showPage('diy-checker'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 flex items-center gap-3">
-                <i class="fa-solid fa-screwdriver-wrench text-canadared-700"></i> DIY Safety Assessor
-            </button>
         </div>
     </header>
 
@@ -131,8 +125,8 @@
                             
                             <!-- Main Headline -->
                             <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
-                                OUME Electrical <br/>
-                                <span class="text-canadared-700">Education & Safety</span>
+                                OUME <br/>
+                                <span class="text-canadared-700 text-lg sm:text-xl lg:text-2xl font-extrabold tracking-normal block mt-2">The Canadian Homeowner’s Electrical Guide</span>
                             </h1>
 
                             <!-- Intro Message -->
@@ -144,9 +138,6 @@
                             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                                 <button onclick="showPage('articles')" class="px-6 py-3.5 rounded-xl bg-canadared-700 hover:bg-canadared-800 text-white font-bold text-sm transition-colors flex items-center justify-center gap-2 shadow-sm">
                                     <i class="fa-solid fa-book-open"></i> Read Safety Articles
-                                </button>
-                                <button onclick="showPage('diy-checker')" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 font-bold text-sm transition-colors flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-screwdriver-wrench text-canadared-700"></i> Check DIY Safety Limits
                                 </button>
                             </div>
 
@@ -376,7 +367,7 @@
                         Trade Educational Focus
                     </span>
                     <h1 class="font-display text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                        About OUME Electrical
+                        About OUME
                     </h1>
                     <p class="text-slate-600 text-base">
                         Dedicated to electrical safety education, code awareness, and high-standard trade knowledge in Calgary, Alberta.
@@ -421,59 +412,6 @@
                         <p>
                             OUME is designed as a pure educational portal to demystify these rules, offer clear non-technical guides, and keep Calgary families safe from common electrical hazards.
                         </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- SECTION 4: DIY SAFETY CHECKER WIDGET PAGE -->
-        <div id="page-diy-checker" class="page-section hidden py-16 bg-slate-50/50 min-h-screen">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                
-                <div class="space-y-2">
-                    <span class="px-3 py-1 bg-canadared-50 text-canadared-700 text-xs font-bold rounded-full border border-canadared-100 uppercase tracking-widest">
-                        Interactive Tool
-                    </span>
-                    <h1 class="font-display text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                        Can I DIY This Electrical Project in Calgary?
-                    </h1>
-                    <p class="text-slate-600 text-sm">
-                        Select an electrical project below to check if a Calgary homeowner can safely perform it, if a City permit is required, or if a qualified trade professional is needed.
-                    </p>
-                </div>
-
-                <!-- Interactive Task Assessor -->
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-6">
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Select Electrical Task:</label>
-                        <select id="diy-task-select" onchange="checkDiyTask()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-canadared-700">
-                            <option value="">-- Choose a Task --</option>
-                            <option value="switch">Replacing a standard light switch (like for like)</option>
-                            <option value="outlet_gfc">Installing a GFCI outlet near kitchen sink</option>
-                            <option value="panel_upgrade">Upgrading main electrical panel from 100A to 200A</option>
-                            <option value="ev_charger">Installing a 240V NEMA 14-50 EV charger outlet</option>
-                            <option value="basement_wiring">Wiring a finished basement with new circuits</option>
-                            <option value="potlights">Adding new ceiling recessed pot lights (new wiring)</option>
-                            <option value="fixture_swap">Replacing an existing decorative ceiling light fixture</option>
-                        </select>
-                    </div>
-
-                    <!-- Output Results Panel -->
-                    <div id="diy-result-box" class="hidden p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-4">
-                        <div class="flex items-center gap-3">
-                            <span id="diy-badge" class="px-3 py-1 rounded-full text-xs font-extrabold uppercase"></span>
-                            <h3 id="diy-title" class="font-display font-bold text-base text-slate-900"></h3>
-                        </div>
-                        
-                        <div class="space-y-3 text-xs sm:text-sm text-slate-700">
-                            <p id="diy-desc" class="leading-relaxed"></p>
-                            
-                            <div class="p-3.5 bg-white rounded-lg border border-slate-200 text-xs space-y-1">
-                                <p class="font-bold text-canadared-700"><i class="fa-solid fa-file-shield mr-1"></i> City of Calgary Permit Requirements:</p>
-                                <p id="diy-permit" class="text-slate-600 leading-relaxed"></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -537,7 +475,6 @@
                         <li><a href="#home" onclick="showPage('home')" class="hover:text-canadared-500 transition-colors">Home</a></li>
                         <li><a href="#articles" onclick="showPage('articles')" class="hover:text-canadared-500 transition-colors">Educational Articles</a></li>
                         <li><a href="#about" onclick="showPage('about')" class="hover:text-canadared-500 transition-colors">About Us</a></li>
-                        <li><a href="#diy" onclick="showPage('diy-checker')" class="hover:text-canadared-500 transition-colors">DIY Safety Checker</a></li>
                     </ul>
                 </div>
 
@@ -553,11 +490,9 @@
 
             <!-- Bottom Copyright -->
             <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-slate-500 gap-3">
-                <p>&copy; 2026 OUME Electrical Education & Safety. Calgary, AB, Canada.</p>
+                <p>&copy; 2026 OUME Electrical.</p>
                 <div class="flex items-center space-x-3">
-                    <span>Alberta Safety Standards</span>
-                    <span>•</span>
-                    <span>CEC Compliant</span>
+                    <span>OUME Project</span>
                 </div>
             </div>
 
@@ -722,84 +657,6 @@
                     card.classList.add('hidden');
                 }
             });
-        }
-
-        function checkDiyTask() {
-            const select = document.getElementById('diy-task-select');
-            const val = select.value;
-            const resultBox = document.getElementById('diy-result-box');
-            const badge = document.getElementById('diy-badge');
-            const title = document.getElementById('diy-title');
-            const desc = document.getElementById('diy-desc');
-            const permit = document.getElementById('diy-permit');
-
-            if (!val) {
-                resultBox.classList.add('hidden');
-                return;
-            }
-
-            resultBox.classList.remove('hidden');
-
-            const rules = {
-                'switch': {
-                    status: 'SAFE FOR DIY',
-                    badgeBg: 'bg-emerald-100 text-emerald-800 border border-emerald-200',
-                    title: 'Like-for-like Switch Swap',
-                    desc: 'Swapping an existing 15A wall switch with a new switch in the exact same junction box with power disconnected at breaker.',
-                    permit: 'No permit required for simple replacement of existing devices without altering wiring.'
-                },
-                'outlet_gfc': {
-                    status: 'CAUTION DIY',
-                    badgeBg: 'bg-amber-100 text-amber-800 border border-amber-200',
-                    title: 'GFCI Receptacle Installation',
-                    desc: 'Requires careful identification of Line vs. Load terminals. Incorrect wiring will disable downstream GFCI protection.',
-                    permit: 'Replacing an existing receptacle directly does not require a permit, but extending cable runs requires a permit.'
-                },
-                'panel_upgrade': {
-                    status: 'TRADE PRO ONLY',
-                    badgeBg: 'bg-canadared-100 text-canadared-800 border border-canadared-200',
-                    title: 'Main Panel Upgrade (100A to 200A)',
-                    desc: 'Dangerous work involving high voltage utility feeder lines prior to main disconnect. Requires ENMAX service isolation.',
-                    permit: 'MANDATORY: Must be performed by a Master Electrician under a City of Calgary electrical contractor trade permit.'
-                },
-                'ev_charger': {
-                    status: 'PRO RECOMMENDED',
-                    badgeBg: 'bg-slate-200 text-slate-800 border border-slate-300',
-                    title: '240V EV Charger Circuit',
-                    desc: 'High continuous load (40A-50A). Requires panel load calculation to ensure main breaker capacity is not exceeded.',
-                    permit: 'Permit required in Calgary. Homeowner permit permitted only if owner-occupied single home and owner performs work.'
-                },
-                'basement_wiring': {
-                    status: 'PERMIT REQUIRED',
-                    badgeBg: 'bg-blue-100 text-blue-800 border border-blue-200',
-                    title: 'Basement Wiring & New Circuits',
-                    desc: 'New branch circuits require Arc Fault Circuit Interrupter (AFCI) protection according to current Canadian Electrical Code rules.',
-                    permit: 'Homeowner Permit or Trade Contractor Permit required prior to dry walling.'
-                },
-                'potlights': {
-                    status: 'PERMIT REQUIRED',
-                    badgeBg: 'bg-blue-100 text-blue-800 border border-blue-200',
-                    title: 'New Recessed Pot Lights',
-                    desc: 'Cutting into insulation ceiling vapor barriers requires IC-rated fixtures or sealed boots to maintain insulation value in Calgary cold weather.',
-                    permit: 'Permit required when tapping or extending existing branch circuits.'
-                },
-                'fixture_swap': {
-                    status: 'SAFE FOR DIY',
-                    badgeBg: 'bg-emerald-100 text-emerald-800 border border-emerald-200',
-                    title: 'Light Fixture Replacement',
-                    desc: 'Replacing a standard light fixture with a new light fixture on an existing outlet box with power turned off.',
-                    permit: 'No permit required for direct replacement on an existing junction box.'
-                }
-            };
-
-            const data = rules[val];
-            if (data) {
-                badge.className = 'px-3 py-1 rounded-full text-xs font-extrabold uppercase ' + data.badgeBg;
-                badge.innerText = data.status;
-                title.innerText = data.title;
-                desc.innerText = data.desc;
-                permit.innerText = data.permit;
-            }
         }
     </script>
 </body>
