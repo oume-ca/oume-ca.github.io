@@ -63,11 +63,8 @@
                 
                 <!-- Brand Logo & Slogan -->
                 <a href="#home" onclick="showPage('home')" class="flex items-center space-x-3 group">
-                    <div class="w-10 h-10 rounded-lg bg-canadared-700 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform duration-200">
-                        <i class="fa-solid fa-leaf text-xl"></i>
-                    </div>
                     <div>
-                        <span class="font-display font-black text-2xl tracking-tight text-slate-900">
+                        <span class="font-display font-black text-2xl tracking-tight text-slate-900 group-hover:text-canadared-700 transition-colors">
                             OUME
                         </span>
                         <span class="text-[11px] text-slate-500 block font-medium">
@@ -155,40 +152,11 @@
 
                         </div>
 
-                        <!-- Right Column: Electrical Line-Flat Illustration Banner -->
+                        <!-- Right Column: Visual Asset Banner -->
                         <div class="lg:col-span-5 flex justify-center">
-                            <div class="w-full max-w-md bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col items-center justify-center space-y-4">
-                                <svg class="w-full h-48 text-canadared-700" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Background subtle grid dots -->
-                                    <circle cx="50" cy="50" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="150" cy="50" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="250" cy="50" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="350" cy="50" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="50" cy="150" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="150" cy="150" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="250" cy="150" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="350" cy="150" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="50" cy="250" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="150" cy="250" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="250" cy="250" r="1.5" fill="#cbd5e1"/>
-                                    <circle cx="350" cy="250" r="1.5" fill="#cbd5e1"/>
-
-                                    <!-- House Outline (Flat Line Art) -->
-                                    <path d="M120 180 V240 H280 V180" stroke="#0f172a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M100 180 L200 100 L300 180" stroke="#0f172a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <rect x="175" y="195" width="50" height="45" rx="4" stroke="#0f172a" stroke-width="2.5" fill="#fff1f2"/>
-
-                                    <!-- Electrical Lightning Bolt & Circuit Wires (Canada Red Accent) -->
-                                    <path d="M185 65 L215 35 L200 85 L225 85 L180 135 L195 95 L175 95 Z" fill="#c8102e" stroke="#c8102e" stroke-width="1" stroke-linejoin="round"/>
-                                    <path d="M60 140 C100 140, 130 90, 180 90" stroke="#c8102e" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round" fill="none"/>
-                                    <path d="M340 140 C300 140, 270 90, 220 90" stroke="#c8102e" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round" fill="none"/>
-
-                                    <!-- Safety Shield Badge Icon -->
-                                    <path d="M200 245 L225 255 V275 C225 290, 200 300, 200 300 C200 300, 175 290, 175 275 V255 Z" fill="#fff1f2" stroke="#c8102e" stroke-width="2.5" stroke-linejoin="round"/>
-                                    <path d="M190 273 L197 280 L212 263" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-
-                                <div class="text-center space-y-1">
+                            <div class="w-full max-w-md bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col items-center justify-center space-y-3">
+                                <img src="https://share.gemini.google/zUKnhdZxwfA6" alt="OUME Electrical Safety Graphic" class="w-full h-auto rounded-xl object-cover max-h-64" onerror="this.src='https://placehold.co/400x300/fff1f2/c8102e?text=OUME+Electrical+Safety';">
+                                <div class="text-center space-y-0.5">
                                     <p class="font-display font-bold text-slate-900 text-sm">Canadian Electrical Code Standards</p>
                                     <p class="text-xs text-slate-500">Calgary Homeowner Safety & Code Guidance</p>
                                 </div>
@@ -551,17 +519,14 @@
                 
                 <!-- Col 1: Brand -->
                 <div class="md:col-span-5 space-y-3">
-                    <a href="#home" onclick="showPage('home')" class="flex items-center space-x-2">
-                        <div class="w-7 h-7 rounded bg-canadared-700 flex items-center justify-center text-white text-xs font-bold">
-                            <i class="fa-solid fa-leaf"></i>
-                        </div>
+                    <a href="#home" onclick="showPage('home')" class="inline-block">
                         <span class="font-display font-extrabold text-lg text-white tracking-wider">OUME</span>
                     </a>
                     <p class="text-slate-400 leading-relaxed max-w-sm">
                         Dedicated to promoting electrical safety, Canadian Electrical Code awareness, and home hazard prevention across Canada.
                     </p>
                     <div class="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800/80 px-3 py-1 rounded-md border border-slate-700">
-                        <i class="fa-solid fa-leaf text-canadared-700"></i> An Educational Blog for Canadian Homeowners
+                        <span>An Educational Blog for Canadian Homeowners</span>
                     </div>
                 </div>
 
