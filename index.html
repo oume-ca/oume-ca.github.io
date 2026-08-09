@@ -125,30 +125,9 @@
             <div class="flex items-center justify-between h-20">
                 
                 <!-- Brand Logo -->
-                <div class="flex items-center space-x-3 group">
-                    <div class="relative cursor-pointer" onclick="openLogoModal()" title="Click to upload or change logo">
-                        <!-- Custom Logo Image (if set) or Default Icon -->
-                        <div id="logo-container" class="w-11 h-11 rounded-xl bg-canadared-700 flex items-center justify-center text-white shadow-md group-hover:bg-canadared-800 transition-all overflow-hidden border-2 border-white">
-                            <img id="custom-logo-img" src="" alt="OUME Logo" class="w-full h-full object-cover hidden" />
-                            <svg id="default-logo-svg" class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
-                        </div>
-                        <span class="absolute -bottom-1 -right-1 bg-slate-900 text-white text-[9px] font-mono px-1 py-0.5 rounded-full border border-white opacity-0 group-hover:opacity-100 transition-opacity">
-                            Edit
-                        </span>
-                    </div>
-                    <a href="#home" class="flex flex-col">
-                        <div class="flex items-baseline space-x-1.5">
-                            <span class="text-2xl font-black tracking-wider text-slate-900">OUME</span>
-                            <span class="text-xs font-bold text-canadared-700 uppercase tracking-widest font-mono">ELECTRICAL</span>
-                        </div>
-                        <p class="text-[11px] text-slate-500 font-medium flex items-center gap-1">
-                            <span>Calgary, AB, Canada</span>
-                            <span class="text-canadared-700">🍁</span>
-                        </p>
-                    </a>
-                </div>
+                <a href="#home" class="flex items-center py-2 group">
+                    <img id="custom-header-logo" src="https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto" alt="Company Logo" class="h-12 max-h-14 w-auto object-contain max-w-[250px]" onerror="this.onerror=null; this.src='https://placehold.co/220x55/d80027/ffffff?text=Your+Logo';" />
+                </a>
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-8">
@@ -162,9 +141,7 @@
                 <div class="hidden sm:flex items-center space-x-3">
                     <div class="relative group">
                         <button disabled class="cursor-not-allowed bg-slate-100 border border-slate-300 text-slate-400 font-semibold text-xs py-2.5 px-4 rounded-lg flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                            </svg>
+                            <img src="<img src="PASTE_YOUR_BASE64_STRING_HERE" alt="OUME Logo" class="h-10 w-auto object-contain">" alt="OUME Logo" class="h-10 w-auto object-contain">
                             <span>Request Quote</span>
                             <span class="text-[10px] bg-red-100 text-canadared-700 border border-canadared-200 px-1.5 py-0.5 rounded font-mono font-bold">INACTIVE</span>
                         </button>
@@ -1256,19 +1233,10 @@
         }
 
         function applyLogoSrc(src) {
-            const img = document.getElementById('custom-logo-img');
-            const svg = document.getElementById('default-logo-svg');
-            
-            if (src) {
+            const img = document.getElementById('custom-header-logo');
+            if (img && src) {
                 img.src = src;
-                img.classList.remove('hidden');
-                svg.classList.add('hidden');
                 localStorage.setItem('oume_custom_logo', src);
-            } else {
-                img.src = '';
-                img.classList.add('hidden');
-                svg.classList.remove('hidden');
-                localStorage.removeItem('oume_custom_logo');
             }
         }
 
